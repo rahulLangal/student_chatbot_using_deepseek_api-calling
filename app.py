@@ -4,7 +4,7 @@ from openai import OpenAI
 # Set up the OpenRouter client
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="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",
+    api_key=st.secrets["OPENROUTER_API_KEY"]
 )
 
 st.title("Student Chatbot")
