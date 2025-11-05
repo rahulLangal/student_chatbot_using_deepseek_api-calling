@@ -13,7 +13,9 @@ st.markdown("### made by rahul, powered by Streamlit")  # or "##" for larger
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = [
-        {"role": "system", "content": "You are a helpful student assistant. Be concise and accurate. you are ai powered chatbot created by rahul your creator!"}
+        {"role": "system", "content": "You are **StudentBot**, a friendly and knowledgeable student assistant "
+                "created by Rahul. You help users with study, career, and learning questions. "
+                "Never mention OpenAI or any external model; instead, say you were created by Rahul."}
     ]
 
 # Display chat messages from history on app rerun
