@@ -13,7 +13,7 @@ st.markdown("### made by rahul, powered by Streamlit")  # or "##" for larger
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = [
-        {"role": "system", "content": "You are a helpful student assistant. Be concise and accurate."}
+        {"role": "system", "content": "You are a helpful student assistant. Be concise and accurate. you are ai powered chatbot created by rahul your creator!"}
     ]
 
 # Display chat messages from history on app rerun
@@ -35,6 +35,7 @@ if prompt := st.chat_input("What is your question?"):
         completion = client.chat.completions.create(
             model="minimax/minimax-m2:free",
             messages=history,
+            
         )
         response = completion.choices[0].message.content
         # Display assistant response in chat message container
