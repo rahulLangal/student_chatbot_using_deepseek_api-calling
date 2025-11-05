@@ -33,7 +33,7 @@ if prompt := st.chat_input("What is your question?"):
     with st.spinner("Thinking..."):
         history = st.session_state.messages[-20:]
         completion = client.chat.completions.create(
-            model="nvidia/nemotron-nano-12b-v2-vl:free",
+            model="deepseek-chat",
             messages=history,
         )
         response = completion.choices[0].message.content
